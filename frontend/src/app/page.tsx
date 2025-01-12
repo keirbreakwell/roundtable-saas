@@ -6,8 +6,8 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <div className="divide-y divide-gray-200">
               <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                <h1 className="text-3xl font-bold">Welcome to Roundtable</h1>
-                <p>Your AI agents management platform</p>
+              <h1>Welcome to Roundtable - Version 1.0</h1>
+                <p>The best AI agents management platform</p>
               </div>
             </div>
           </div>
@@ -15,4 +15,5 @@ export default function Home() {
       </div>
     </div>
   );
-}
+}vlkdfmvpdfv
+dv
