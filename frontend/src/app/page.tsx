@@ -15,5 +15,4 @@ export default function Home() {
       </div>
     </div>
   );
-}vlkdfmvpdfv
-dv
+}
