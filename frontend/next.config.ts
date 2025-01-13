@@ -6,7 +6,8 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    turbotrace: true,  // Added this for build caching
+    optimizeCss: true,    // CSS optimization
+    forceSwcTransforms: true,  // Force faster transforms
   },
 };
 
