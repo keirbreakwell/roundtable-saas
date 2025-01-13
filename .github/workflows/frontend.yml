@@ -73,7 +73,8 @@ jobs:
       
       - name: Deploy to S3
         run: |
-          aws s3 sync frontend/out s3://${{ secrets.AWS_S3_BUCKET }} --delete
+            ls -la ./frontend  # This will help us debug
+            aws s3 sync ./frontend/.next/out s3://${{ secrets.AWS_S3_BUCKET }} --delete
       
       - name: Invalidate CloudFront
         run: |
