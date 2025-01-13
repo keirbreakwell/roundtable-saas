@@ -64,6 +64,15 @@ jobs:
         env:
           NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
       
+      - name: Debug Directory Structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Directory contents:"
+          ls -la
+          echo "Parent directory contents:"
+          ls -la ..
+      
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -73,8 +82,7 @@ jobs:
       
       - name: Deploy to S3
         run: |
-            ls -la ./frontend  # This will help us debug
-            aws s3 sync ./frontend/.next/out s3://${{ secrets.AWS_S3_BUCKET }} --delete
+          aws s3 sync .next s3://${{ secrets.AWS_S3_BUCKET }} --delete
       
       - name: Invalidate CloudFront
         run: |
