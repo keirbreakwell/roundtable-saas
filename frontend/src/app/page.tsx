@@ -16,4 +16,3 @@ export default function Home() {
     </div>
   );
 }
-// Add or modify something small, like changing text or adding a comment
